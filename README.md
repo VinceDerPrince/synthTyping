@@ -1,7 +1,7 @@
-# Project Name: Code Synth
+# TypingSynth
 
 ## Description:
-Code Synth is a Python project that plays a synthesizer sound while you write code. The project aims to enhance the coding experience by providing a musical ambiance as you work on your programming tasks.
+TypingSynth is a Python project that plays a synthesizer sound while you write code. The project aims to enhance the coding experience by providing a musical ambiance as you work on your programming tasks.
 
 ## Features:
 -  Plays a synthesizer sound in the background while coding.
