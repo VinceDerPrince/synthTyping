@@ -1,4 +1,7 @@
 # TypingSynth
+https://github.com/VinceDerPrince/synthTyping/assets/90899655/dac0e020-e1f3-440a-9fcc-450778e98413
+
+
 
 ## Description:
 TypingSynth is a Python project that plays a synthesizer sound while you write code. The project aims to enhance the coding experience by providing a musical ambiance as you work on your programming tasks.
