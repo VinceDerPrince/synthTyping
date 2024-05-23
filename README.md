@@ -22,7 +22,7 @@ To Come (Maybe):
 Feel free to customize the synth settings and volume to suit your preferences.
 
 ## Credits:
--  Created by [Your Name]
+-  Created by Vincent Elster
   
 ## License:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
