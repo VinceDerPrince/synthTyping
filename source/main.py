@@ -24,7 +24,8 @@ def generate_bassy_sine_wave(frequency, duration=0.65, sample_rate=44100, bassy 
         wave = enhance_bass(wave, sample_rate)
     wave = np.int16(wave * 32767)  # Convert to 16-bit PCM
     stereo_wave = np.stack((wave, wave), axis=-1)  # Make it 2D for stereo
-    return stereo_wave
+    print(stereo_wave)
+    return stereo_wave * 3
 
 # Function to apply a bass enhancement
 def enhance_bass(wave, sample_rate, bass_boost_freq=20, bass_boost_gain=1.12):
@@ -37,10 +38,11 @@ def enhance_bass(wave, sample_rate, bass_boost_freq=20, bass_boost_gain=1.12):
     max_amplitude = max(np.abs(enhanced_wave))
     if max_amplitude > 1:
         enhanced_wave /= max_amplitude
+    print(enhanced_wave)
     return enhanced_wave
 
 # Function to apply ADSR envelope to a waveform
-def apply_adsr_envelope(wave, sample_rate, attack=0.01, decay=0.1, sustain=0.5, release=0.005):
+def apply_adsr_envelope(wave, sample_rate, attack=0.5, decay=0.1, sustain=0.5, release=0.005):
     total_samples = len(wave)
     attack_samples = int(attack * sample_rate)
     decay_samples = int(decay * sample_rate)
@@ -68,7 +70,7 @@ def on_press(key):
     try:
         if key.char != None:
             print(f'Alphanumeric key pressed: {key.char}')
-            play_sound(ord(key.char) * uniform(1.5, 2.7))  # Play sound on key press
+            play_sound(ord(key.char) * uniform(0.2, 1.9))  # Play sound on key press
     except AttributeError:
         print(f'Special key pressed: {key}')
 def on_release(key):
